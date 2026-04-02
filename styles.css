@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#carta {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.firma {
+  margin-top: 10px;
+  font-style: italic;
+}
