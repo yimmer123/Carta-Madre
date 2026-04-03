@@ -1,11 +1,37 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: pink;
+  background: linear-gradient(135deg, #d8cdcd, #b93592);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
+}
+
+/* animación constante tipo flotante */
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); /* sube */
+  }
+  100% {
+    transform: translateY(0px); /* baja */
+  }
+}
+.carta-img {
+  width: 120px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+
+  animation: flotar 2s ease-in-out infinite; 
+  /* 2s = velocidad, infinite = nunca para */
+}
+.carta-img:hover {
+  transform: scale(1.1); /* crece un poco */
 }
 
 .container {
@@ -31,10 +57,62 @@ button {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
+
+
+/* fondo gris */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5); /* gris oscuro */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+
+
+/* carta centrada */
+#carta {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+
+  animation: aparecer 0.3s ease;
+}
+
+/* animación */
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 .firma {
   margin-top: 10px;
   font-style: italic;
 }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+

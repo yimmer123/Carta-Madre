@@ -6,21 +6,26 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+  <canvas id="confetti"></canvas>  
   <div class="container">
     <h1>🎉 Feliz Cumpleaños Madre🎉</h1>
 
-    <button id="btn">Ver mensaje 💌</button>
+    <!-- Imagen que será la carta -->
+    <img src="img/carta.png" id="cartaImg" alt="Carta" class="carta-img">
 
-    <div id="carta" class="hidden">
-      <h2>Querida Madre Mía</h2>
-      <p>
-        Hoy es un día especial 🎂<br>
-        Te deseo mucha felicidad, risas y momentos inolvidables 💖
-        Muchas gracias por ser la madre mas fuerte del mundo y por ayudarme a sér el hombre que soy. Siempre te querre y apoyare
-        Te amo 💖
-      </p>
-      <p class="firma">Con cariño,<br>Tu Hijo 😏</p>
+
+
+    <div id="overlay" class="hidden">
+        <div id="carta">
+          <h2>Querida Madre Mía</h2>
+          <p>
+            Hoy es un día especial 🎂<br>
+            Te deseo mucha felicidad, risas y momentos inolvidables 💖
+            Muchas gracias por ser la madre mas fuerte del mundo y por ayudarme a sér el hombre que soy. Siempre te querre y apoyare
+            Te amo 💖
+          </p>
+          <p class="firma">Con cariño,<br>Tu Hijo 😏</p>
+        </div>
     </div>
   </div>
 
