@@ -40,7 +40,7 @@ body {
   margin: 20px auto;
   cursor: pointer;
   position: absolute;
-  left: -80px;
+  left: -135px;
   bottom: 130px;/* esquina inferior izquierda */
 
 
@@ -51,7 +51,7 @@ body {
   margin: 20px auto;
   cursor: pointer;
   position: absolute;
-  right: -100px;
+  right: -145px;
   bottom: 120px;/* esquina inferior izquierda */
 
 
