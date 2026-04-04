@@ -1,15 +1,38 @@
 const cartaImg = document.getElementById("cartaImg");
 const overlay = document.getElementById("overlay");
+const cancion = document.getElementById("cancion");
 
 const globos1Img = document.getElementById("globos1Img");
 const modal_foto1 = document.getElementById("modal_foto1");
 
+const globos2Img = document.getElementById("globos2Img");
+const modal_foto2 = document.getElementById("modal_foto2");
+
+
+function reproducirCancion() {
+  if (cancion.paused) { //  solo si está detenida
+    cancion.currentTime = 0;
+    cancion.play().catch(e => console.log(e));
+  }
+}
+
 cartaImg.addEventListener("click", () => {
   overlay.classList.toggle("hidden");
+
+  reproducirCancion();
 });
+
 
 globos1Img.addEventListener("click", () => {
   modal_foto1.classList.toggle("hidden1");
+
+  reproducirCancion();
+});
+
+globos2Img.addEventListener("click", () => {
+  modal_foto2.classList.toggle("hidden1");
+
+  reproducirCancion();
 });
 
 // cerrar al hacer click fuera
@@ -24,6 +47,16 @@ modal_foto1.addEventListener("click", (e) => {
     modal_foto1.classList.add("hidden1");
   }
 });
+
+modal_foto2.addEventListener("click", (e) => {
+  if (e.target === modal_foto2) {
+    modal_foto2.classList.add("hidden1");
+  }
+});
+
+
+
+
 
 // CONFETI
 const canvas = document.getElementById("confetti");
