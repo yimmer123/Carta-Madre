@@ -1,14 +1,27 @@
 const cartaImg = document.getElementById("cartaImg");
 const overlay = document.getElementById("overlay");
 
+const globos1Img = document.getElementById("globos1Img");
+const modal_foto1 = document.getElementById("modal_foto1");
+
 cartaImg.addEventListener("click", () => {
   overlay.classList.toggle("hidden");
+});
+
+globos1Img.addEventListener("click", () => {
+  modal_foto1.classList.toggle("hidden1");
 });
 
 // cerrar al hacer click fuera
 overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
     overlay.classList.add("hidden");
+  }
+});
+
+modal_foto1.addEventListener("click", (e) => {
+  if (e.target === modal_foto1) {
+    modal_foto1.classList.add("hidden1");
   }
 });
 
